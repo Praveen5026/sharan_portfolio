@@ -1,193 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>P Sharanabasappa | Digital Resume</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/scrollreveal"></script>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Outfit', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
-      scroll-behavior: smooth;
-    }
-
-    .container {
-      display: grid;
-      grid-template-columns: 280px 1fr;
-      min-height: 100vh;
-    }
-	
-    aside {
-      background: #1a1a2e;
-      padding: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      height: 100vh;
-    }
-
-    aside .photo {
-      width: 1.5cm;
-      height: 1.5cm;
-      border-radius: 50%;
-      background: url('photo.jpg') center/cover;
-      margin-bottom: 1rem;
-      border: 3px solid #6c5ce7;
-    }
-
-    aside h1 {
-      font-size: 1.5rem;
-      margin-bottom: 0.2rem;
-    }
-
-    aside .subtitle {
-      font-size: 0.9rem;
-      color: #bbb;
-      margin-bottom: 1.5rem;
-    }
-
-    aside nav a {
-      display: block;
-      text-decoration: none;
-      color: #ddd;
-      margin: 0.8rem 0;
-      padding: 0.5rem 1rem;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    aside nav a:hover {
-      background: #6c5ce7;
-      color: #fff;
-    }
-
-    .btn-download {
-      background: #6c5ce7;
-      color: white;
-      padding: 0.5rem 1.2rem;
-      border-radius: 20px;
-      margin-top: 1rem;
-      text-align: center;
-      text-decoration: none;
-    }
-
-    main {
-      padding: 2rem 3rem;
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-    }
-
-    section {
-      background: rgba(255, 255, 255, 0.05);
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
-      color: #a29bfe;
-    }
-
-    .skills span, .projects .card {
-      display: inline-block;
-      background: #2d3436;
-      margin: 0.3rem;
-      padding: 0.4rem 0.9rem;
-      border-radius: 8px;
-      font-weight: 600;
-    }
-
-    .projects .card {
-      background: #1f1f2f;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-left: 4px solid #6c5ce7;
-    }
-
-    footer {
-      text-align: center;
-      color: #ccc;
-      padding: 2rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Kotlin Practice – Working Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 30px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #3f51b5;
+        }
+        pre {
+            background: #eee;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <aside>
-      <div class="photo">
-  <img src="pp.jpg" alt="Profile Photo" style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;" />
+
+<div class="container">
+    <h2>Kotlin Practice – Session 1 Lab</h2>
+
+    <h3>Kotlin Code</h3>
+    <pre>
+fun main() {
+
+    val name = "Praveen"
+    val age = 21
+
+    println("My name is $name and I am $age years old.")
+
+    val skills = listOf("Kotlin", "Java", "Web Development")
+
+    printSkills(name, skills)
+}
+
+fun printSkills(userName: String, skillsList: List<String>) {
+    println("Skills of $userName are:")
+    for (skill in skillsList) {
+        println("- $skill")
+    }
+}
+    </pre>
+
+    <h3>Program Output (Web Simulation)</h3>
+    <p id="output"></p>
+    <ul id="skillList"></ul>
 </div>
-      <h1>P Sharanabasappa</h1>
-      <p class="subtitle">Aspiring Software Engineer</p>
-      <nav>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-        <a href="resume.pdf" class="btn-download" download>Download Resume</a>
-      </nav>
-    </aside>
 
-    <main>
-      <section id="about">
-                <h2>About Me</h2>
-        <p>I’m a Computer Science student with roots in Civil Engineering. I bring discipline and adaptability, and I’ve developed interest and skill in software development, including <strong>Java, SQL, Ubuntu</strong>, and <strong>HTML</strong>. I also enjoy learning languages and trying new tech challenges.</p>
-      </section>
+<script>
+    // Simulating Kotlin logic using JavaScript
 
-      <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-          <span>Java</span><span>C</span><span>SQL</span><span>Ubuntu</span><span>HTML</span>
-        </div>
-      </section>
+    const name = "Praveen";
+    const age = 21;
+    const skills = ["Kotlin", "Java", "Web Development"];
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-          <div class="card">
-            <strong>ETABS – Structural Design</strong><br>
-            Modeled structures using ETABS during a field internship, exploring software capabilities for civil structures.
-          </div>
-          <div class="card">
-            <strong>Internship – Site Engineer</strong><br>
-            Observed on-site construction, planning, and real-world application of project management.
-          </div>
-        </div>
-      </section>
+    document.getElementById("output").innerText =
+        `My name is ${name} and I am ${age} years old. Skills are:`;
 
-      <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: psharana525@gmail.com</p>
-        <p>Phone: +91 79759 65159</p>
-        <p>Location: Hassan</p>
-      </section>
-
-      <footer>
-        © 2025 P Sharanabasappa. Crafted with ✨ and curiosity.
-      </footer>
-    </main>
-  </div>
-
-  <script>
-    ScrollReveal().reveal('section', {
-      origin: 'bottom',
-      distance: '40px',
-      duration: 1000,
-      easing: 'ease-out',
-      reset: false,
-      interval: 200
+    const ul = document.getElementById("skillList");
+    skills.forEach(skill => {
+        const li = document.createElement("li");
+        li.innerText = skill;
+        ul.appendChild(li);
     });
-  </script>
+</script>
+
 </body>
 </html>
+
